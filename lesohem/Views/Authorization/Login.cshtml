@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="auth">
+            <div class="login-text">Авторизация</div>
+            <h2 class="user-notfound" hidden style="text-align:center; margin-bottom:10px; color:red">Пользователь не был найден!</h2>
+            <input type="text" class="login" placeholder="Введите логин">
+            <input type="text" class="password" placeholder="Введите пароль">
+            <div class="notFound" style="text-align:center; font-size:30px; padding-bottom:10px; color:red">
+                <p></p>
+            </div>
+            <button class="btn-send">Войти</button>
+        </div>
+    </div>
+
+
+
+    <script src="/js/login.js"></script>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn-send").click(function (e) {
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("LoginLocation")",
+                    data: {
+                        userLogin: document.querySelector(".login").value,
+                        userPassword: document.querySelector(".password").value
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.url != null) {
+                            location = response.url
+                        }
+                        else {
+                            document.querySelector(".notFound p").textContent = "Пользователь не найден";
+                        }
+                    },
+                    error: function () {
+                        console.log("Error!")
+                    }
+                })
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>

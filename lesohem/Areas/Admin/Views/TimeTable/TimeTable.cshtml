@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/TimeTableCss/TableBlock.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Расписание</title>
+</head>
+<body>
+    <div class="timeTable">
+        <div class="timeTable-buttons">
+            <button class="edit btn">Изменить</button>
+            <button class="add btn">Добавить</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    // При нажатии на кнопку, добавлеяем html элемент, в котором админ будет добавлять/редактировать расписание
+    const AddTimeTable = async () => {
+        const response = await fetch("/Admin/TimeTable/ShowTimeTable", {
+            method: "GET"
+        })
+        if (response.ok == true) {
+            var data = await response.json()
+            await AddElementsForTimeTable(data)
+            await LoadScriptForTimeTable()
+        }
+    }
+    // Добавляем элементы html
+    const AddElementsForTimeTable = async (data) => {
+        const check = document.querySelectorAll(".block-add")
+        var body = document.querySelector("body")
+        var div = document.createElement("div")
+        div.classList.add("block-add")
+        body.appendChild(div)
+        div.innerHTML = data
+    }
+    // Загружаем скрипт для новой формы html
+    const LoadScriptForTimeTable = async () => {
+        var block = document.querySelector(".block-add")
+        var script = document.createElement("script")
+        script.setAttribute("src", "/js/TimeTableJs/EditorBlock.js")
+        block.appendChild(script)
+    }
+    document.querySelector(".add").addEventListener("click", AddTimeTable)
+
+    async function LoadBlock(){
+        var response = await fetch("/Admin/TimeTable/GetContent", {
+            method: "GET"
+        })
+        if (response.ok == true) {
+            var data = await response.json()
+            var elementNext = -1;
+            data.forEach((e) => {
+                SetBlock(e,elementNext += 1)
+            })
+        }
+    }
+    async function SetBlock(data,elementNext){
+        var table = document.querySelector(".timeTable")
+        var div = document.createElement("div")
+        div.classList.add("timeTable-block")
+        div.innerHTML = data.elementDiv
+        table.appendChild(div)
+        console.log(data)
+        document.querySelectorAll(".timeTable-block p")[elementNext].textContent = data.name
+        document.querySelectorAll(".timeTable-block")[elementNext].setAttribute("data-rowid", `${data.id}`)
+        document.querySelectorAll(".timeTable-block a")[elementNext].setAttribute("href", `/Admin/TimeTable/LoadFiles?id=${data.id}`)
+    }
+    LoadBlock()
+
+    async function EventClickLoad(){
+        const loadElement = document.querySelectorAll(".timeTable-block a")
+        for(var i = 0; i < loadElement.length; i++){
+            loadElement[i].addEventListener("click", async() => {
+                
+            })
+        }
+    }
+    EventClickLoad()
+</script>

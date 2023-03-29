@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Profile.css">
+    <link rel="stylesheet" href="/css/Layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="" class="currentUserId" style="display:none" />
+    <div class="content">
+        <div class="header">
+            <div class="header_login">
+                <div class="header_login_container">
+                    <a class="login" href="/Authorization/Login">Войти</a>
+                    <div class="header_login__profile">
+                        <img src="/image/icons/profile.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="header_burger">
+                <span></span>
+            </div>
+            <div class="header_menu">
+                <ul class="header_list">
+                    <li class="link">
+                        <a href="">Студенту</a>
+                        <ul class="sub-header-list">
+                            <li class="sub-link">
+                                <a href="">Очное обучение</a>
+                                <ul class="sub-sub-header-list">
+                                    <li class="sub-sub-link"><a href="">Стоимость обучения</a></li>
+                                    <li class="sub-sub-link"><a href="">Стипендия</a></li>
+                                    <li class="sub-sub-link"><a href="">Расписание экзаменов</a></li>
+                                    <li class="sub-sub-link"><a href="">Расписание занятий</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-link">
+                                <a href="">Заочное обучение</a>
+                                <ul class="sub-sub-header-list">
+                                    <li class="sub-sub-link"><a href="">Стоимость обучения</a></li>
+                                    <li class="sub-sub-link"><a href="">Стипендия</a></li>
+                                    <li class="sub-sub-link"><a href="">Расписание экзаменов</a></li>
+                                    <li class="sub-sub-link"><a href="">Расписание занятий</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-link"><a href="">Расписание</a></li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="">Абитуриенту</a>
+                        <ul class="sub-header-list">
+                            <li class="sub-link"><a href="">Наши специальности</a></li>
+                            <li class="sub-link"><a href="">Программы профессионального обучения для лиц с ОВЗ</a></li>
+                            <li class="sub-link"><a href="">План приема</a></li>
+                            <li class="sub-link">
+                                <a href="">Очное обучение</a>
+                                <ul class="sub-sub-header-list">
+                                    <li class="sub-sub-link"><a href="">Рейтинг абитуриентов</a></li>
+                                    <li class="sub-sub-link"><a href="">Условия приема</a></li>
+                                    <li class="sub-sub-link"><a href="">Документы</a></li>
+                                    <li class="sub-sub-link"><a href="">Приказ о зачислении</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-link">
+                                <a href="">Заочное обучение</a>
+                                <ul class="sub-sub-header-list">
+                                    <li class="sub-sub-link"><a href="">План приема</a></li>
+                                    <li class="sub-sub-link"><a href="">Условия приема</a></li>
+                                    <li class="sub-sub-link"><a href="">Приказ о зачислении</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-link"><a href="">Стоимость обучения</a></li>
+                            <li class="sub-link"><a href="">Общежитие</a></li>
+                        </ul>
+                    </li>
+                    <div class="header_logo">
+                        <a href="/Home/Index"><img src="/image/logo.png" alt=""></a>
+                    </div>
+                    <li class="link"><a href="">Новости</a></li>
+                    <li class="link"><a href="">Еще</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="profile-block">
+                <a href="" class="logout">Выйти</a>
+                <div class="profile-image">
+                    <img src="" alt="" id="ViewImage">
+                    <div class="edit">
+                        <input type="file" class="file" />
+                    </div>
+                </div>
+                <div class="profile-spec">
+                    <p>Студент</p>
+                </div>
+                <div class="profile-fullName">
+                    <p>Васильев Василий</p>
+                </div>
+                <div class="profile-icons">
+                    <div class="vk icons"><a href=""><img src="/image/icons-profile/apps_social_media_vk_logo_icon_229305 1.png" alt=""></a></div>
+                    <div class="telegram icons"><a href=""><img src="/image/icons-profile/telegram_logo_icon_229299 1.png" alt=""></a></div>
+                    <div class="instagram icons"><a href=""><img src="/image/icons-profile/instagram_logo_icon_229292 1.png" alt=""></a></div>
+                    <div class="facebook icons"><a href=""><img src="/image/icons-profile/meta_fb_communication_social_media_katana_facebook_icon_228415 1.png" alt=""></a></div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <div class="CountryName general">
+                    <a href=""><span></span></a>
+                    <div class="country-info general-info">
+                        <p>Страна:</p>
+                    </div>
+                    <div class="country-text general-text">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="CityName general">
+                    <a href=""><span></span></a>
+                    <div class="city-info general-info">
+                        <p>Город:</p>
+                    </div>
+                    <div class="city-text general-text">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="Gender general">
+                    <a href=""><span></span></a>
+                    <div class="gender-info general-info">
+                        <p>Пол:</p>
+                    </div>
+                    <div class="gender-text general-text">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="GroupName general">
+                    <a href=""><span></span></a>
+                    <div class="group-info general-info">
+                        <p>Группа:</p>
+                    </div>
+                    <div class="group-text general-text">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="DirectionName general">
+                    <a href=""><span></span></a>
+                    <div class="direction-info general-info">
+                        <p>Направление:</p>
+                    </div>
+                    <div class="direction-text general-text">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="links-socMedia">
+                    <div class="link-vk links">
+                        <p>VK:</p>
+                        <input type="text" placeholder="Оставьте ссылку на ваш аккаунт ВКонтакте">
+                    </div>
+                    <div class="link-tg links">
+                        <p>Telegram:</p>
+                        <input type="text" placeholder="Оставьте ссылку на ваш аккаунт Телеграм">
+                    </div>
+                    <div class="link-inst links">
+                        <p>Instagramm:</p>
+                        <input type="text" placeholder="Оставьте ссылку на ваш аккаунт Инстаграм">
+                    </div>
+                    <div class="link-facebook links">
+                        <p>Facebook:</p>
+                        <input type="text" placeholder="Оставьте ссылку на ваш аккаунт Фейсбук">
+                    </div>
+                    <div class="save-links">
+                        <button>Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-admin">
+            <a href="">Управление ролями</a>
+            <a href="/Admin/TimeTable/TimeTable">Управление расписанием</a>
+            <a href="">Управление контентом</a>
+            <a href="">Добавление пользователей</a>
+        </div>
+    </div>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.4.min.js"></script>
+<script>
+    $.ajax({
+        type : "POST",
+        url: "@Url.Action("CheckUser")",
+        success:function(data){
+            var login = document.querySelector(".login");
+            const id = document.querySelector(".currentUserId")
+            login.textContent = data.name;
+            console.log(data.id)
+            id.textContent = data.id
+            login.setAttribute("href", `${data.link}`)
+        },
+        error:function(){
+            console.log("error")
+        }
+    })
+    var editBlock = document.querySelector(".edit")
+        $(".profile-image").mouseover(function (event) {
+            editBlock.setAttribute("style", "bottom:0; transition: all 0.2s ease-in-out;")
+        })
+        $(".profile-image").mouseout(function (event) {
+            editBlock.setAttribute("style", "bottom:-20%")
+            editBlock.setAttribute("style", "transition: all 0.2s ease-in-out;")
+        })
+    // Отправляем все данные input-ov и их ключи на сервер
+    const SetData = async () => {
+        var val = Object.keys(GetLinks()).map(key => ({"MediaName" : key,"MediaLink" : GetLinks()[key]}))
+        val.forEach(async function(e){
+                await fetch("@Url.Action("SaveMedia")", {
+                method: "POST",
+                body: JSON.stringify(e),
+                headers : {"Content-Type" : "application/json"}
+            })
+        })
+    }
+    // Получаем значения input-ov и возвращаем их значения
+    function GetLinks(){
+        return {
+            "vk": document.querySelector(".link-vk input").value,
+            "telegram": document.querySelector(".link-tg input").value,
+            "instagram" : document.querySelector(".link-inst input").value,
+            "facebook" : document.querySelector(".link-facebook input").value
+        }
+    }
+    function GetName(){
+        return {
+            "CountryName" : "null",
+            "CityName" : "null",
+            "GroupName" : "null",
+            "DirectionName": "null",
+            "Gender": "null"
+        }
+    }
+    // При нажатии на кнопку, вызываем функцию, которая получает значения input-ov из функции GetLinks
+    document.querySelector(".save-links button").addEventListener("click", SetData)
+
+    // Отправляем запрос на серевер, для получения ссылок из бд
+    const GetLinkMediaForInput = async () => {
+         const data = await fetch("@Url.Action("GetMedia")", {
+             method : "GET",
+             headers: { "Accept" : "application/json"}
+         })
+         if(data.ok == true){
+             await SetLinkMediaForInput(data)
+         }else{
+             console.log("Error!")
+         }
+    }
+    // Вставляем наши полученные ссылки
+    const SetLinkMediaForInput = async(data) => {
+        data.json().then((value) => {
+            value.forEach((link) => {
+                Object.keys(GetLinks()).forEach((linkName) => {
+                    if (link.includes(`${linkName}`)) {
+                        document.querySelector(`.${linkName} a`).setAttribute("href", `${link}`)
+                    }
+                })
+            })
+        })
+    }
+    GetLinkMediaForInput()
+
+    // Задаем атрибуты для каждого блока, что бы потом вывести информацию в каждый блок
+    const LoadRowForEditInfo = () => {
+        const test = document.querySelectorAll(".general")
+        for(var i = 0; i < test.length; i++){
+            test[i].setAttribute("data-rowid", i)
+        }
+        test.forEach((e) => {
+            e.addEventListener("click", (c) => {
+                c.preventDefault()
+                Edit(e.getAttribute("data-rowid"))
+            })
+        })
+    }
+    // Получаем информацию о пользователе, и отправляем в функцию, которая их выведет
+    const GetInfoProfile = async() => {
+        const data = await fetch("@Url.Action("GetInfoProfile")", {
+            method : "GET",
+            headers : {"Accept" : "application/json"}
+        })
+        if(data.ok == true){
+            SetInfoProfile(data)
+        }
+    }
+    // Вставляем полученые значения 
+    const SetInfoProfile = (data) => {
+        data.json().then((value) => {
+            for (var i = 0; i < value.length; i++) {
+                document.querySelector(".general[data-rowid='" + i + "'] .general-text p").textContent = value[i]
+            }
+        })
+    }
+    // Получаем значения для редактирования, и отправлеяем на сервер
+    const Edit = async (data) => {
+        var elementEdit = document.querySelector(".general[data-rowid='" + data + "'] .general-text p")
+        var mass = elementEdit.parentElement.parentElement.className.split(" ")
+        var user = {
+            [mass[0]]: `${elementEdit.textContent = prompt("Введите значение")}`
+        }
+        var formData = new FormData()
+        formData.append("Value", JSON.stringify(user))
+
+        var response = await fetch("@Url.Action("EditInfoProfile")",{
+            method : "POST",
+            body : formData
+        })
+    }
+    GetInfoProfile()
+    LoadRowForEditInfo()
+
+    // При клике на кнопку "выход", обращаемся к серверу
+    document.querySelector(".logout").addEventListener("click", async (e) => {
+        e.preventDefault()
+        var response = await fetch("@Url.Action("LogoutProfile")", {
+            method : "POST",
+            headers : {"Accept" : "application/json", "Content-Type" : "application/json"}
+        })
+        if(response.ok == true){
+            var data = response.json()
+            data.then((e) => {
+                location = e.url
+            })
+        }
+    })
+
+    // При изменении, т.е добавлении файла, выводим в блок, и сохраняем в бд
+    document.querySelector(".file").addEventListener("change", async(e) => {
+        var files = e.target.files
+        document.querySelector(".profile-image img").setAttribute("src", window.URL.createObjectURL(files[0]))
+        await SaveImage(files)
+
+    })
+    // Сохраняем изображение в БД
+    const SaveImage = async(files) => {
+        var formData = new FormData()
+        for(var i = 0; i < files.length; i++){
+            formData.append("file", files[i])
+        }
+            var response = await fetch("@Url.Action("SaveImage")", {
+            method : "POST",
+            body : formData
+        })
+    }
+    // Получаем всю информацию о пользователе
+    const GetUser = async() => {
+        var response = await fetch("@Url.Action("GetImage")", {
+        method : "GET"
+    })
+    if(response.ok == true){
+        response.json().then((e) => {
+            document.querySelector(".profile-image img").setAttribute("src", "data:image/jpg;base64," + e.photo + "")
+            document.querySelector(".profile-spec p").textContent = e.userRole
+            document.querySelector(".profile-fullName p").textContent = e.name + " " + e.surName
+        })
+    }
+}
+
+        GetUser()
+</script>
+</body>
+</html>

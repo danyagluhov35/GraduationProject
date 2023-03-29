@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'Brush Script MT';
+    src: url(./brushscriptmtrusbyme_italic.eot);
+    src: url(./brushscriptmtrusbyme_italic.eot?#iefix) format('embedded-opentype'), url(./brushscriptmtrusbyme_italic.woff2) format('woff2'), url(./brushscriptmtrusbyme_italic.woff) format('woff'), url(./brushscriptmtrusbyme_italic.ttf) format('truetype'), url(./brushscriptmtrusbyme_italic.svg#brushscriptmtrusbyme_italic) format('svg'), url(./brushscriptmtrusbyme_italic.otf) format('otf');
+}
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    font-size: 25px;
+}
+
+button {
+    border: none;
+    background: none;
+}
+/* /image/background/news-back.jpg */
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding-top: 90px;
+    display: flex;
+    font-size: 30px;
+}
+
+.profile-block {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 70px 50px 0 50px;
+}
+
+    .profile-block a {
+        color: red;
+        text-align: center;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+.profile-image {
+    width: 300px;
+    height: 400px;
+}
+
+    .profile-image img {
+        max-width: 100%;
+    }
+
+.profile-spec p {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.profile-fullName p {
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.profile-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.profile-info {
+    width: 100%;
+    margin-left: 90px;
+}
+
+.general {
+    display: flex;
+}
+
+    .general a span {
+        position: relative;
+    }
+
+        .general a span::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -50px;
+            width: 40px;
+            height: 45px;
+            background-image: url('/image/icons-profile/pen_edit_icon_250245 5.png');
+        }
+
+.general-info {
+    background-color: rgb(231, 230, 227);
+    width: 100%;
+    padding: 15px 0 15px 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Brush Script MT';
+    font-style: italic;
+}
+
+.general-text {
+    width: 100%;
+    padding: 15px 0 15px 20px;
+    display: block;
+    font-family: 'Brush Script MT';
+    font-style: italic;
+}
+
+.links-socMedia {
+    margin-top: 130px;
+}
+
+.links {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+    .links input {
+        width: 100%;
+    }
+
+    .links p {
+        margin-right: 40px;
+        display: block;
+        width: 220px;
+        text-align: right;
+    }
+
+.save-links {
+    display: flex;
+    position: relative;
+}
+
+    .save-links button {
+        border: 1px solid black;
+        display: block;
+        position: absolute;
+        right: 0;
+        padding: 10px 20px;
+        border: none;
+        background: linear-gradient(45deg, #3a64fb, #32e037);
+        color: #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+.panel-admin {
+    margin-top: 20px;
+    width: 400px;
+    padding-bottom: 200px;
+}
+
+.panel-admin a {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.panel-admin a:hover {
+    border-bottom: 1px solid #009eeb;
+    color: #009eeb;
+}
+/*---Profile Logo---*/
+.profile-image{
+    position:relative;
+    overflow:hidden;
+}
+
+
+.profile-image img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.edit {
+    position: absolute;
+    bottom: -20%;
+    left: 40%;
+}
+.file{
+    color:transparent;
+    width:74px;
+    height:74px;
+}
+.file:before {
+    content: '';
+    color: rgb(209, 27, 27);
+    display: inline-block;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../image/ProfilePhoto/gallery_edit_icon_243208.png);
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 74px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*---Media Blocks---*/
+@media(max-width:1200px) {
+    .container {
+        max-width: 970px;
+        padding-bottom: 100px;
+    }
+
+    .general {
+        display: block;
+    }
+
+    .links p {
+        width: 260px;
+    }
+}
+@media(max-width:992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .links p {
+        width: 400px;
+        margin-left: -100px;
+    }
+}
+
+@media(max-width:767px) {
+    .html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: none;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 400px;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    .profile-image img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .profile-block {
+        padding: 0;
+    }
+
+    .profile-icons {
+        justify-content: space-around;
+    }
+}

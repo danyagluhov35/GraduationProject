@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+input, button {
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: rgb(44, 43, 42);
+    overflow:hidden;
+}
+
+.block {
+    display: grid;
+    position: absolute;
+    width: 100%;
+    left: 25%;
+    justify-items: center;
+    grid-template-columns: repeat(1,1fr);
+    stroke-dasharray: 200px;
+    stroke-dashoffset: 200px;
+    stroke: aqua;
+}
+
+    .block svg .book {
+        stroke: #554a40;
+    }
+
+    .block g path {
+        stroke: rgb(0, 255, 106);
+    }
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.auth {
+}
+
+.login-text {
+    color: #4F8551;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login {
+    padding: 15px 50px 15px 20px;
+    border-radius: 30px;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.password {
+    padding: 15px 50px 15px 20px;
+    border-radius: 30px;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.btn-send {
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 36px;
+    font-weight: 800;
+    font-style: italic;
+    color: #383937;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background-color: #b0b7a9;
+    transition: all 0.3s ease-in-out;
+}
